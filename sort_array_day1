@@ -1,0 +1,32 @@
+# Dutch National Flag Algorithm
+def sort_array(a):
+    l, half, h = 0, 0, len(a) - 1
+    while half <= h:
+        if a[half] == 0:
+            a[l], a[half] = a[half], a[l]
+            l += 1
+            half += 1
+        elif a[half] == 1:
+            half += 1
+        else:
+            a[half], a[h] = a[h], a[half]
+            h -= 1
+    return a
+
+a1 = [0, 1, 2, 1, 0, 2, 1, 0]
+print(sort_array(a1))  
+
+a2 = [2, 2, 2, 2]
+print(sort_array(a2))  
+
+a3 = [0, 0, 0, 0]
+print(sort_array(a3))  
+
+a4 = [1, 1, 1, 1]
+print(sort_array(a4))  
+
+a5 = [2, 0, 1]
+print(sort_array(a5))  
+
+a6 = []
+print(sort_array(a6))  
