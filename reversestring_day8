@@ -1,0 +1,11 @@
+def reverse_words(s: str) -> str:
+    words = s.split()
+    reversed_words = words[::-1]
+    return ' '.join(reversed_words)
+
+# Test cases
+print(reverse_words("the sky is blue"))        # Output: "blue is sky the"
+print(reverse_words("  hello world  "))        # Output: "world hello"
+print(reverse_words("a good   example"))       # Output: "example good a"
+print(reverse_words("    "))                   # Output: ""
+print(reverse_words("word"))                   # Output: "word"
